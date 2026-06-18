@@ -1,4 +1,4 @@
-import { icons, ShoppingCart } from "lucide-react"
+import { ShoppingCart } from "lucide-react"
 import { Link, useLocation } from "react-router-dom"
 import { Button } from "../ui/button"
 import { Badge } from "../ui/badge"

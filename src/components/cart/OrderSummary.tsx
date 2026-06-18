@@ -5,7 +5,6 @@ import { Separator } from "@/components/ui/separator"
 import { useCartStore } from "@/store/cartStore"
 
 export default function OrderSummary() {
-  const items = useCartStore((state) => state.items)
   const totalPrice = useCartStore((state) => state.totalPrice)
   const totalItems = useCartStore((state) => state.totalItems)
   const clearCart = useCartStore((state) => state.clearCart)
