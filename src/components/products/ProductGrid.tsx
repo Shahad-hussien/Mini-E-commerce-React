@@ -8,7 +8,6 @@ interface ProductGridProps {
   isError: boolean
 }
 
-// Separate skeleton component for clean code
 function ProductCardSkeleton() {
   return (
     <div className="flex flex-col overflow-hidden rounded-xl border">

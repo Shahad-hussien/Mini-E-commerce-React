@@ -16,12 +16,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        {/* Logo */}
         <Link to="/" className="text-xl font-bold tracking-tight">
           MyShop
         </Link>
 
-        {/* Nav Links */}
         <nav className="flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
@@ -34,7 +32,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Cart Button */}
         <Link to="/cart">
           <Button variant="outline" size="icon" className="relative">
             <ShoppingCart className="h-5 w-5" />

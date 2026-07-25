@@ -20,7 +20,6 @@ export default function OrderSummary() {
 
       <Separator />
 
-      {/* Line Items */}
       <div className="flex flex-col gap-3 text-sm">
         <div className="flex justify-between">
           <span className="text-muted-foreground">
@@ -52,19 +51,16 @@ export default function OrderSummary() {
 
       <Separator />
 
-      {/* Total */}
       <div className="flex justify-between text-lg font-bold">
         <span>Total</span>
         <span>${total.toFixed(2)}</span>
       </div>
 
-      {/* Checkout Button */}
       <Button size="lg" className="w-full gap-2">
         <ShoppingBag className="h-5 w-5" />
         Checkout
       </Button>
 
-      {/* Clear Cart */}
       <Button
         variant="ghost"
         size="sm"

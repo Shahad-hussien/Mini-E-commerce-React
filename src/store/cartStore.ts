@@ -3,16 +3,16 @@ import { persist } from "zustand/middleware"
 import type { CartItem, Product } from "@/types"
 
 interface CartStore {
-  // state
+  
   items: CartItem[]
 
-  // Actions
+  
   addItem: (product: Product) => void
   removeItem: (productId: number) => void
   updateQuantity: (productId: number, quantity: number) => void
   clearCart: () => void
 
-  // selectors (derived/computed values)
+
   totalItems: () => number
   totalPrice: () => number
 }
@@ -26,14 +26,13 @@ export const useCartStore = create<CartStore>()(
         set((state) => {
           const existing = state.items.find((i) => i.id === product.id)
           if (existing) {
-            // product already in cart => just increase quantity
+            
             return {
               items: state.items.map((i) =>
                 i.id === product.id ? { ...i, quantity: i.quantity + 1 } : i
               ),
             }
           }
-          // new product
           return { items: [...state.items, { ...product, quantity: 1 }] }
         }),
 

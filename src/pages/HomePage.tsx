@@ -26,12 +26,12 @@ const features = [
 export default function HomePage() {
   const { data: products, isLoading } = useProducts()
 
-  // Show 4 featured products — slice is fine here, no need for a separate API call
+
   const featured = products?.slice(0, 4)
 
   return (
     <div className="flex flex-col gap-16">
-      {/* Hero */}
+
       <section className="flex flex-col items-center gap-6 py-16 text-center">
         <h1 className="max-w-xl text-5xl leading-tight font-bold tracking-tight">
           Shop the things you actually need
@@ -48,7 +48,7 @@ export default function HomePage() {
         </Link>
       </section>
 
-      {/* Features */}
+  
       <section className="grid grid-cols-1 gap-6 sm:grid-cols-3">
         {features.map((f) => (
           <div
@@ -62,7 +62,7 @@ export default function HomePage() {
         ))}
       </section>
 
-      {/* Featured Products */}
+      
       <section className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Featured Products</h2>

@@ -13,7 +13,6 @@ const CategoryFilter = ({ selected, onSelect }: CategoryFilterProps) => {
 
   return (
     <div className="flex flex-wrap gap-2">
-      {/* All is the first option, always */}
       <Button
         variant={selected === "all" ? "default" : "outline"}
         size="sm"

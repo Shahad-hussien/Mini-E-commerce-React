@@ -29,7 +29,7 @@ export default function CartPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Header */}
+    
       <div className="flex items-center gap-4">
         <Link
           to="/products"
@@ -49,19 +49,19 @@ export default function CartPage() {
         )}
       </h1>
 
-      {/* Empty State */}
+     
       {items.length === 0 ? (
         <EmptyCart />
       ) : (
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {/* Cart Items — takes 2/3 of the width */}
+        
           <div className="flex flex-col gap-4 lg:col-span-2">
             {items.map((item) => (
               <CartItem key={item.id} item={item} />
             ))}
           </div>
 
-          {/* Order Summary — takes 1/3 of the width */}
+      
           <div>
             <OrderSummary />
           </div>

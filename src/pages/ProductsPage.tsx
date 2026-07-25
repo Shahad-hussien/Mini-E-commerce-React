@@ -14,7 +14,7 @@ export default function ProductsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Page Header */}
+     
       <div>
         <h1 className="text-3xl font-bold">Products</h1>
         <p className="mt-1 text-muted-foreground">
@@ -22,13 +22,13 @@ export default function ProductsPage() {
         </p>
       </div>
 
-      {/* Category Filter */}
+      
       <CategoryFilter
         selected={selectedCategory}
         onSelect={setSelectedCategory}
       />
 
-      {/* Product Grid */}
+   
       <ProductGrid products={data} isLoading={isLoading} isError={isError} />
     </div>
   )
